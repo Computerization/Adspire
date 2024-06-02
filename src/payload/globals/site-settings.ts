@@ -49,10 +49,10 @@ export const siteSettings: GlobalConfig = {
             { type: 'text', name: 'appDescription' }
           ]
         },
-        {
-          name: 'header',
-          fields: [{ type: 'text', name: 'logo' }, menuItemsField('menuItems', 2, { interfaceName: 'HeaderMenu' })]
-        },
+        // {
+        //   name: 'header',
+        //   fields: [{ type: 'text', name: 'logo' }, menuItemsField('menuItems', 2, { interfaceName: 'HeaderMenu' })]
+        // },
         {
           name: 'footer',
           fields: [{ type: 'text', name: 'copyright' }, menuItemsField('menuItems', 0, { interfaceName: 'FooterMenu' })]
