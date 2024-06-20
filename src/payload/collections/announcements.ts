@@ -8,7 +8,7 @@ export const announcements: CollectionConfig = {
   slug: COLLECTION_SLUG_ANNOUNCEMENTS,
   admin: {
     useAsTitle: 'message',
-    defaultColumns: ['message', 'updatedAt', 'createdAt']
+    defaultColumns: ['message', 'createdAt']
   },
   versions: false,
   access: {
