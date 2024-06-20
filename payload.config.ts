@@ -1,4 +1,4 @@
-import { media, pages, sessions, users } from '@/payload/collections'
+import { announcements, media, pages, sessions, users } from '@/payload/collections'
 import { COLLECTION_SLUG_MEDIA, COLLECTION_SLUG_PAGE, COLLECTION_SLUG_PRODUCTS } from '@/payload/collections/config'
 import { siteSettings } from '@/payload/globals/site-settings'
 import generateBreadcrumbsUrl from '@/payload/utils/generateBreadcrumbsUrl'
@@ -25,7 +25,7 @@ const dirname = path.dirname(filename)
 
 export default buildConfig({
   globals: [siteSettings],
-  collections: [users, pages, media, sessions, products, prices, subscriptions],
+  collections: [announcements, users, pages, media, sessions, products, prices, subscriptions],
   admin: {
     livePreview: {
       url: ({ data, locale }) => `${process.env.NEXT_PUBLIC_SITE_URL}/preview${data.path}${locale ? `?locale=${locale.code}` : ''}`,
