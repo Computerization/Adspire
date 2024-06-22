@@ -2,7 +2,7 @@ import type { CollectionConfig } from 'payload/types'
 import { COLLECTION_SLUG_ANNOUNCEMENTS } from './config'
 import { revalidateTag } from 'next/cache'
 import { generateDocumentCacheKey } from '@/payload/utils/getDocument'
-import { isAdmin, isAdminOrPublished } from '@/payload/access'
+import { isAdmin, isAnyone } from '@/payload/access'
 
 export const announcements: CollectionConfig = {
   slug: COLLECTION_SLUG_ANNOUNCEMENTS,
@@ -12,7 +12,7 @@ export const announcements: CollectionConfig = {
   },
   versions: false,
   access: {
-    read: isAdminOrPublished,
+    read: isAnyone,
     create: isAdmin,
     update: isAdmin,
     delete: isAdmin
